@@ -237,6 +237,7 @@
                     result="[{\"key\":\"login_name\",\"name\":\"用户登陆昵称\",\"isSelect\":false},{\"key\":\"type\",\"name\":\"用户类型\",\"isSelect\":true,\"select\":[\"无\",\"管理员\",\"普通用户\"]}]";
                     query="[{\"key\":\"login_name\",\"name\":\"用户登陆昵称\",\"type\":1},{\"key\":\"type\",\"name\":\"用户类型\",\"type\":2,\"select\":[{\"option\":-1,\"value\":\"全部\"},{\"option\":1,\"value\":\"管理员\"},{\"option\":2,\"value\":\"普通用户\"}]},{\"key\":10,\"name\":\"每页查询多少行\",\"type\":3}]";
                     appendQuery(query);
+                    var a="[{\"key\":\"login_name\",\"name\":\"用户登陆昵称\",\"isSelect\":false},{\"key\":\"type\",\"name\":\"用户类型\",\"isSelect\":true,\"select\":[\"无\",\"管理员\",\"普通用户\"]}]";
                 }else {
                     //解析条件，拿到查询条件和显示条件
                     //拿到查询条件去生成查询条件的按钮、
@@ -244,6 +245,7 @@
                     result= date.result.displayCondition;
                     appendQuery(date.result.queryCriteria);
                 }
+
                 //进行第一次查询
                 $.ajax({
                     type: 'POST',
